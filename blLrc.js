@@ -16,7 +16,7 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 221 ";
+	var xdVer	= " blLrcClass :: v1.1. 222 ";
   var _CreateLyrBoard2 = function(oBoss)
   {	 
 		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
@@ -59,10 +59,10 @@ function blLrcClass (tt, _nIdx , blID )
 			s += '<td nowrap height="20" align="center" id="lrcwt8"></td>';
 		s += '</tr>';
 		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt9"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt10"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt11"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt12"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt13"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtA"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtB"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtC"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtD"></td></tr>';
 		s += '</table>';
 		s += '</div>';
 		
@@ -276,10 +276,10 @@ function blLrcClass (tt, _nIdx , blID )
 
       lrcwt8.innerText		= ">>>-"  + this.retxt(ii+1);
       lrcwt9.innerText		= this.retxt(ii+2);
-      lrcwt10.innerText = this.retxt(ii+3);
-      lrcwt11.innerText = this.retxt(ii+4);
-      lrcwt12.innerText = this.retxt(ii+5);
-      lrcwt13.innerText = this.retxt(ii+6);
+      lrcwtA.innerText = this.retxt(ii+3);
+      lrcwtB.innerText = this.retxt(ii+4);
+      lrcwtC.innerText = this.retxt(ii+5);
+      lrcwtD.innerText = this.retxt(ii+6);
       this.blSetTxt(this.retxt(ii)); 
 
       if(this.dlt==ii-1)
@@ -336,10 +336,10 @@ function blLrcClass (tt, _nIdx , blID )
   lrcfilter.innerText = "xxxxxxxxxxxxxxxxxxxxxxxx";
   lrcwt8.innerText = "";
   lrcwt9.innerText = "";
-  lrcwt10.innerText = "";
-  lrcwt11.innerText = "";
-  lrcwt12.innerText = "";
-  lrcwt13.innerText = "";
+  lrcwtA.innerText = "";
+  lrcwtB.innerText = "";
+  lrcwtC.innerText = "";
+  lrcwtD.innerText = "";
 	 
   this.blRun = function(_this)
   {
