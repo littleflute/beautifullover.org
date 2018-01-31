@@ -16,7 +16,7 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 244 ";
+	var xdVer	= " blLrcClass :: v1.1. 251 ";
   var _CreateLyrBoard2 = function(oBoss)
   {	 
 		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
@@ -29,8 +29,8 @@ function blLrcClass (tt, _nIdx , blID )
 		var d2BodyContend = o.blDiv(oBoss,"d2BodyContend","d2BodyContend: V x.x.x",blColor[12]); 
 
 		var s = "";
-		s += '<div id="lrcollbox" style="overflow:hidden; height:260; width:660; background-color:#59a;">'; 
-		s += '<table border="1" cellspacing="0" cellpadding="0" width="100%" id="lrcoll"';
+		s += '<div style="overflow:hidden; height:260; width:660; background-color:#59a;">'; 
+		s += '<table border="1" cellspacing="0" cellpadding="0" width="100%" id="lrcoll'+blID+'"';
 		s += ' style="position:relative; top: -20px;" oncontextmenu="return false;">';
 		s += '<tr><td nowrap height="20" align="center" id="lrcwt1'+blID+'"></td></tr>';
 		s += '<tr><td nowrap height="20" align="center" id="lrcwt2'+blID+'"></td></tr>';
@@ -284,16 +284,16 @@ function blLrcClass (tt, _nIdx , blID )
       if(this.dlt==ii-1)
       {
         clearTimeout(lrcTimer0);
-        if(lrcoll.style.pixelTop!=0) lrcoll.style.top = 0;
+        if(bl$("lrcoll"+blID).style.pixelTop!=0) bl$("lrcoll"+blID).style.top = 0;
   
 		_blMove(0,"lrcoll"+blID);  
         clearTimeout(lrcTimer1);  
         _golrcolor(0); 
       }
-      else if(parseInt(lrcoll.style.top)!=-20)
+      else if(parseInt(bl$("lrcoll"+blID).style.top)!=-20)
       {
 	    clearTimeout(lrcTimer0);
-        lrcoll.style.top = -20;
+        bl$("lrcoll"+blID).style.top = -20;
         clearTimeout(lrcTimer1);
       }
 
