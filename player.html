@@ -1,4 +1,3 @@
-
 <script>
 var m = {
         type: 'file',
@@ -101,10 +100,10 @@ var myLrc = "http://www.beautifullover.org/lrcTest.js";
 if(myLrc) blo0.blScript("id_script_lrcdata",myLrc);
 function loadLyricOK(){ 
 	var l = document.getElementById("lrcdata");
-	lrcobj = new blLrcClass(l.innerHTML,3,1);
-	lrcobj.blRun(lrcobj);
-	lrcobj = new blLrcClass(l.innerHTML,3,2);
-	lrcobj.blRun(lrcobj);
+	for(var i=0; i<m.source.length;i++){
+		lrcobj = new blLrcClass(l.innerHTML,3,i);
+		lrcobj.blRun(lrcobj);
+	}
 }
-bl$( "id_div_page_v" ).innerHTML = "v0.1. 313 ";
+bl$( "id_div_page_v" ).innerHTML = "v0.1. 315 ";
 </script>
