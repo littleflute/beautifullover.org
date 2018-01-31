@@ -7,16 +7,16 @@ function _golrcolor(t)
     if(t<=10)
       lrcTimer1 = setTimeout("_golrcolor("+t+")",xdMin*10);
   }
-  function _golrcoll(s)
+  function _blMove(s,_o)
   { 
-		lrcoll.style.top = -(s++)*2;
-		if(s<=9)
-			lrcTimer0 = setTimeout("_golrcoll("+s+")",xdMin*10);
+	_o.style.top = -(s++)*2;
+	if(s<=9)
+		lrcTimer0 = setTimeout("_blMove("+s+","+_o+")",xdMin*10);
   }
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 212 ";
+	var xdVer	= " blLrcClass :: v1.1. 221 ";
   var _CreateLyrBoard2 = function(oBoss)
   {	 
 		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
@@ -287,7 +287,7 @@ function blLrcClass (tt, _nIdx , blID )
         clearTimeout(lrcTimer0);
         if(lrcoll.style.pixelTop!=0) lrcoll.style.top = 0;
   
-		_golrcoll(0);  
+		_blMove(0,"lrcoll"+blID);  
         clearTimeout(lrcTimer1);  
         _golrcolor(0); 
       }
