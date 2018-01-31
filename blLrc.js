@@ -27,66 +27,9 @@ function _golrcolor(t)
 		if(s<=9)
 			lrcTimer0 = setTimeout("_golrcoll("+s+")",xdMin*10);
   }
- 
- function _showList(o,d,type,a,jj){
-			for(i in a){
-				var id = d.id + "_link_song_" + i;
-				var url = "?t=";
-				url += type;
-				url += "&f=";
-				url += a[i].f;
-				url += "&l=";
-				url += a[i].l;
-				if(jj) url += "&j="+jj;
-				var ii = parseInt(i);
-				ii++;
-				var txt = "s_" + ii;
-				o.blLink(d,id,txt,url,5==type?"yellowgreen":"gold");
-			}
-		}
-var ls = null;
+   
 var htm5List = null;
-var vc6List = null;
-function loadListOK(){  
-		_showList(blo0,htm5List,5,ls,QueryString.j);
-		_showList(blo0,vc6List,4,ls,QueryString.j);
-}
-  var _CreateSongList = function(o,oBoss,j)//xdug 1049
-  {	 
-		htm5List = o.blDiv(oBoss,oBoss.id+"htm5List","[HTML5]:: ","skyblue"); 
-		vc6List = o.blDiv(oBoss,oBoss.id+"vc6List","[VC6  ]:: ","gray"); 
-	
-	if(j){ 
-			o.blScript(oBoss.id + "_script_lrc_list",j);
-		}
-		else{
-			ls = [		
-					{
-                    "f": "file:///C:/Users/13699/xd1/vc6/files/u0101.mp3",
-                    "l": "file:///C:/Users/13699/xd/js/lrc/01_lrc.js" 
-					},	
-					{
-                    "f": "file:///C:/Users/13699/xd1/vc6/files/u0102.mp3",
-                    "l": "file:///C:/Users/13699/xd/js/lrc/02_lrc.js" 
-					},
-					{
-                    "f": "file:///C:/Users/13699/xd1/vc6/files/u0201.mp3",
-                    "l": "file:///C:/Users/13699/xd/js/lrc/03_lrc.js" 
-					},
-					{
-                    "f": "file:///C:/Users/13699/xd1/vc6/files/u0202.mp3",
-                    "l": "file:///C:/Users/13699/xd/js/lrc/04_lrc.js" 
-					}, 
-				];
-			
-			_showList(o,htm5List,5,ls);
-			_showList(o,vc6List,4,ls);
-		} 		
-  }
-var xdPlayerDiv = blo0.blDiv(document.body,"xdPlayerDiv","");
-
-
-
+var vc6List = null;   
 
 var myLrc = "http://www.beautifullover.org/lrcTest.js";
 
@@ -101,10 +44,10 @@ function loadLyricOK(){
 
 function blLrcClass (tt,xt,f)
 {	
-	var xdVer	= " blLrcClass ： v1.1. 35 ";
+	var xdVer	= " blLrcClass :: v1.1. 44 ";
   var _CreateUI = function(f)
   { 
-	var divMP = o.blDiv(xdPlayerDiv,"mp1","xdxdxd","red"); 
+	var divMP = blo0.blDiv(document.body, "mp1","xdxdxd","red"); 
 	_InitPlayer(xdType,divMP,f); 
 
 	var d 	= blo0.blMDiv(document.body, "id_div_4_Lyric_ui" ,s, 444 , 111 ,850,50,blColor[2]); 
