@@ -16,7 +16,7 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 251 ";
+	var xdVer	= " blLrcClass :: v1.1. 252 ";
   var _CreateLyrBoard2 = function(oBoss)
   {	 
 		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
@@ -26,7 +26,7 @@ function blLrcClass (tt, _nIdx , blID )
 		var d2 = o.blDiv(oBoss,oBoss.id+"_div_lrc_right_now",url,blColor[4]); 
 		var lrcLink = blo0.blLink(oBoss,oBoss.id+"lrcLink","lrc_src",url,blColor[3]); 
 		
-		var d2BodyContend = o.blDiv(oBoss,"d2BodyContend","d2BodyContend: V x.x.x",blColor[12]); 
+		var d2BodyContend = o.blDiv(oBoss,"d2BodyContend"+ blID ,"d2BodyContend: V x.x.x",blColor[12]); 
 
 		var s = "";
 		s += '<div style="overflow:hidden; height:260; width:660; background-color:#59a;">'; 
