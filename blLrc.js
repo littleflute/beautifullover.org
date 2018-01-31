@@ -16,7 +16,58 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 211 ";
+	var xdVer	= " blLrcClass :: v1.1. 212 ";
+  var _CreateLyrBoard2 = function(oBoss)
+  {	 
+		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
+		_CreateToolBar(d2Body);
+		var d1 = o.blDiv(oBoss,oBoss.id+"_div_song_right_now",QueryString.f,blColor[2]); 
+		var url = QueryString.l;
+		var d2 = o.blDiv(oBoss,oBoss.id+"_div_lrc_right_now",url,blColor[4]); 
+		var lrcLink = blo0.blLink(oBoss,oBoss.id+"lrcLink","lrc_src",url,blColor[3]); 
+		
+		var d2BodyContend = o.blDiv(oBoss,"d2BodyContend","d2BodyContend: V x.x.x",blColor[12]); 
+
+		var s = "";
+		s += '<div id="lrcollbox" style="overflow:hidden; height:260; width:660; background-color:#59a;">'; 
+		s += '<table border="1" cellspacing="0" cellpadding="0" width="100%" id="lrcoll"';
+		s += ' style="position:relative; top: -20px;" oncontextmenu="return false;">';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt1"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt2"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt3"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt4"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt5"></td></tr>';
+		s += '<tr style="color:#BDB76B;">';
+			s += '<td nowrap height="20" align="center" id="lrcwt6">';
+				s += '</td></tr>'; 
+
+		s += '<tr style="color:#BDB76B;">';
+			s += '<td nowrap height="20" align="center">';
+					s += '<div id="lrcwt7" style="overflow:hidden;position:relative; width:100%; color:#FFFF33; height:20">lrcwt7 ...</div>';
+					s += '<div id="lrcfilter" style="overflow:hidden;position:relative;top: -20px; width:100%; color:#FFFF33; height:20">lrcfilter ...</div>';
+				s += '</td></tr>'; 
+
+		s += '<tr style="color:#BDB76B;">';
+			s += '<td nowrap height="20">';
+					s += '<div id="xdwrap">';
+					s += '<div id="lrcbox" style="overflow:hidden;position:relative; width:100%; color:#800000; height:20">?豕∩那?車???D ...</div>';
+					s += '<div id="idMovingLyr" style="overflow:hidden;position:relative;top: -20px; width:0; color:#FFFF33; height:20">?豕∩那?車???D ...</div>';
+					s += '</div>';
+				s += '</td></tr>'; 
+ 
+		s += '<tr style="position:relative; top: -20px;color:#FF9900;"><!-- next to come words-->';
+			s += '<td nowrap height="20" align="center" id="lrcwt8"></td>';
+		s += '</tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt9"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt10"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt11"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt12"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt13"></td></tr>';
+		s += '</table>';
+		s += '</div>';
+		
+		d2BodyContend.innerHTML = s;
+  } 
   var _CreateUI = function( _id )
   { 
 
@@ -116,57 +167,6 @@ function blLrcClass (tt, _nIdx , blID )
 		}(b1);
   }
 
-  var _CreateLyrBoard2 = function(oBoss)
-  {	 
-		var d2Body = o.blDiv(oBoss,"d2Body","","DarkOrchid");
-		_CreateToolBar(d2Body);
-		var d1 = o.blDiv(oBoss,oBoss.id+"_div_song_right_now",QueryString.f,blColor[2]); 
-		var url = QueryString.l;
-		var d2 = o.blDiv(oBoss,oBoss.id+"_div_lrc_right_now",url,blColor[4]); 
-		var lrcLink = blo0.blLink(oBoss,oBoss.id+"lrcLink","lrc_src",url,blColor[3]); 
-		
-		var d2BodyContend = o.blDiv(oBoss,"d2BodyContend","d2BodyContend: V x.x.x",blColor[12]); 
-
-		var s = "";
-		s += '<div id="lrcollbox" style="overflow:hidden; height:260; width:660; background-color:#59a;">'; 
-		s += '<table border="1" cellspacing="0" cellpadding="0" width="100%" id="lrcoll"';
-		s += ' style="position:relative; top: -20px;" oncontextmenu="return false;">';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt1"></td></tr>';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt2"></td></tr>';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt3"></td></tr>';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt4"></td></tr>';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt5"></td></tr>';
-		s += '<tr style="color:#BDB76B;">';
-			s += '<td nowrap height="20" align="center" id="lrcwt6">';
-				s += '</td></tr>'; 
-
-		s += '<tr style="color:#BDB76B;">';
-			s += '<td nowrap height="20" align="center">';
-					s += '<div id="lrcwt7" style="overflow:hidden;position:relative; width:100%; color:#FFFF33; height:20">lrcwt7 ...</div>';
-					s += '<div id="lrcfilter" style="overflow:hidden;position:relative;top: -20px; width:100%; color:#FFFF33; height:20">lrcfilter ...</div>';
-				s += '</td></tr>'; 
-
-		s += '<tr style="color:#BDB76B;">';
-			s += '<td nowrap height="20">';
-					s += '<div id="xdwrap">';
-					s += '<div id="lrcbox" style="overflow:hidden;position:relative; width:100%; color:#800000; height:20">?豕∩那?車???D ...</div>';
-					s += '<div id="idMovingLyr" style="overflow:hidden;position:relative;top: -20px; width:0; color:#FFFF33; height:20">?豕∩那?車???D ...</div>';
-					s += '</div>';
-				s += '</td></tr>'; 
- 
-		s += '<tr style="position:relative; top: -20px;color:#FF9900;"><!-- next to come words-->';
-			s += '<td nowrap height="20" align="center" id="lrcwt8"></td>';
-		s += '</tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt9"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt10"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt11"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt12"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt13"></td></tr>';
-		s += '</table>';
-		s += '</div>';
-		
-		d2BodyContend.innerHTML = s;
-  } 
   _CreateUI ( blID );
 
   this.inr = [];
