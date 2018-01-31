@@ -27,24 +27,10 @@ function _golrcolor(t)
 		if(s<=9)
 			lrcTimer0 = setTimeout("_golrcoll("+s+")",xdMin*10);
   }
-   
-var htm5List = null;
-var vc6List = null;   
-
-var myLrc = "http://www.beautifullover.org/lrcTest.js";
-
-if(myLrc) blo0.blScript("id_script_lrcdata",myLrc);
-
-
-function loadLyricOK(){ 
-	var l = document.getElementById("lrcdata");
-	lrcobj = new blLrcClass(l.innerHTML,QueryString.t,QueryString.f);
-	lrcobj.blRun(lrcobj);
-}
-
+    
 function blLrcClass (tt,xt,f)
 {	
-	var xdVer	= " blLrcClass :: v1.1. 52 ";
+	var xdVer	= " blLrcClass :: v1.1. 114 ";
   var _CreateUI = function(f)
   { 
 	var divMP = blo0.blDiv(document.body, "mp1","xdxdxd","red"); 
