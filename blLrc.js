@@ -16,7 +16,7 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 224 ";
+	var xdVer	= " blLrcClass :: v1.1. 241 ";
   var _CreateLyrBoard2 = function(oBoss)
   {	 
 		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
@@ -34,17 +34,17 @@ function blLrcClass (tt, _nIdx , blID )
 		s += ' style="position:relative; top: -20px;" oncontextmenu="return false;">';
 		s += '<tr><td nowrap height="20" align="center" id="lrcwt1'+blID+'"></td></tr>';
 		s += '<tr><td nowrap height="20" align="center" id="lrcwt2'+blID+'"></td></tr>';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt3"></td></tr>';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt4"></td></tr>';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt5"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt3'+blID+'"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt4'+blID+'"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt5'+blID+'"></td></tr>';
 		s += '<tr style="color:#BDB76B;">';
-			s += '<td nowrap height="20" align="center" id="lrcwt6">';
+			s += '<td nowrap height="20" align="center" id="lrcwt6'+blID+'">';
 				s += '</td></tr>'; 
 
 		s += '<tr style="color:#BDB76B;">';
 			s += '<td nowrap height="20" align="center">';
-					s += '<div id="lrcwt7" style="overflow:hidden;position:relative; width:100%; color:#FFFF33; height:20">lrcwt7 ...</div>';
-					s += '<div id="lrcfilter" style="overflow:hidden;position:relative;top: -20px; width:100%; color:#FFFF33; height:20">lrcfilter ...</div>';
+					s += '<div id="lrcwt7'+blID+'" style="overflow:hidden;position:relative; width:100%; color:#FFFF33; height:20">lrcwt7 ...</div>';
+					s += '<div id="lrcfilter'+blID+'" style="overflow:hidden;position:relative;top: -20px; width:100%; color:#FFFF33; height:20">lrcfilter ...</div>';
 				s += '</td></tr>'; 
 
 		s += '<tr style="color:#BDB76B;">';
@@ -56,13 +56,13 @@ function blLrcClass (tt, _nIdx , blID )
 				s += '</td></tr>'; 
  
 		s += '<tr style="position:relative; top: -20px;color:#FF9900;"><!-- next to come words-->';
-			s += '<td nowrap height="20" align="center" id="lrcwt8"></td>';
+			s += '<td nowrap height="20" align="center" id="lrcwt8'+blID+'"></td>';
 		s += '</tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt9"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtA"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtB"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtC"></td></tr>';
-		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtD"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwt9'+blID+'"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtA'+blID+'"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtB'+blID+'"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtC'+blID+'"></td></tr>';
+		s += '<tr style="position:relative; top: -20px;"><td nowrap height="20" align="center" id="lrcwtD'+blID+'"></td></tr>';
 		s += '</table>';
 		s += '</div>';
 		
@@ -264,22 +264,22 @@ function blLrcClass (tt, _nIdx , blID )
       this.dts = this.inr[ii].t[0];
       this.dte = (ii<this.inr.length-1)?this.inr[ii+1].t[0]:xdCP;
 
-      ("lrcwt1"+blID).innerText = this.retxt(ii-7);
-      ("lrcwt2"+blID).innerText = this.retxt(ii-6);
-      lrcwt3.innerText = this.retxt(ii-5);
-      lrcwt4.innerText = this.retxt(ii-4);
-      lrcwt5.innerText = this.retxt(ii-3);
-      lrcwt6.innerText = this.retxt(ii-2);
+      bl$("lrcwt1"+blID).innerText = this.retxt(ii-7);
+      bl$("lrcwt2"+blID).innerText = this.retxt(ii-6);
+      bl$("lrcwt3"+blID).innerText = this.retxt(ii-5);
+      bl$("lrcwt4"+blID).innerText = this.retxt(ii-4);
+      bl$("lrcwt5"+blID).innerText = this.retxt(ii-3);
+      bl$("lrcwt6"+blID).innerText = this.retxt(ii-2);
   
-      lrcwt7.innerText			= this.retxt(ii-1);
-      lrcfilter.innerText		= this.retxt(ii-1);
+      bl$("lrcwt7"+blID).innerText			= this.retxt(ii-1);
+      bl$("lrcfilter"+blID).innerText		= this.retxt(ii-1);
 
-      lrcwt8.innerText		= ">>>-"  + this.retxt(ii+1);
-      lrcwt9.innerText		= this.retxt(ii+2);
-      lrcwtA.innerText = this.retxt(ii+3);
-      lrcwtB.innerText = this.retxt(ii+4);
-      lrcwtC.innerText = this.retxt(ii+5);
-      lrcwtD.innerText = this.retxt(ii+6);
+      bl$("lrcwt8"+blID).innerText		= ">>>-"  + this.retxt(ii+1);
+      bl$("lrcwt9"+blID).innerText		= this.retxt(ii+2);
+      bl$("lrcwtA"+blID).innerText = this.retxt(ii+3);
+      bl$("lrcwtB"+blID).innerText = this.retxt(ii+4);
+      bl$("lrcwtC"+blID).innerText = this.retxt(ii+5);
+      bl$("lrcwtD"+blID).innerText = this.retxt(ii+6);
       this.blSetTxt(this.retxt(ii)); 
 
       if(this.dlt==ii-1)
@@ -326,20 +326,20 @@ function blLrcClass (tt, _nIdx , blID )
   }
   
   this.blSetTxt("?米赤3?Y??車D?角1??豕∩那...");
-  ("lrcwt1"+blID).innerText = "111111111111111111";
-  ("lrcwt2"+blID).innerText = "";
-  lrcwt3.innerText = "";
-  lrcwt4.innerText = "";
-  lrcwt5.innerText = "";
-  lrcwt6.innerText = ""; 
-  lrcwt7.innerText = "";
-  lrcfilter.innerText = "xxxxxxxxxxxxxxxxxxxxxxxx";
-  lrcwt8.innerText = "";
-  lrcwt9.innerText = "";
-  lrcwtA.innerText = "";
-  lrcwtB.innerText = "";
-  lrcwtC.innerText = "";
-  lrcwtD.innerText = "";
+  bl$("lrcwt1"+blID).innerText = "111111111111111111";
+  bl$("lrcwt2"+blID).innerText = "";
+  bl$("lrcwt3"+blID).innerText = "";
+  bl$("lrcwt4"+blID).innerText = "";
+  bl$("lrcwt5"+blID).innerText = "";
+  bl$("lrcwt6"+blID).innerText = ""; 
+  bl$("lrcwt7"+blID).innerText = "";
+  bl$("lrcfilter"+blID).innerText = "***************==";
+  bl$("lrcwt8"+blID).innerText = "";
+  bl$("lrcwt9"+blID).innerText = "";
+  bl$("lrcwtA"+blID).innerText = "";
+  bl$("lrcwtB"+blID).innerText = "";
+  bl$("lrcwtC"+blID).innerText = "";
+  bl$("lrcwtD"+blID).innerText = "";
 	 
   this.blRun = function(_this)
   {
