@@ -1,3 +1,4 @@
+
 <script src="https://littleflute.github.io/vc6/XdHtml/blclass.js" type="text/javascript"></script>
 <a target="_blank" href="https://github.com/littleflute/beautifullover.org/edit/master/player.html" >player.html*</a>	
 
@@ -15,7 +16,7 @@
 </style>
 
 <script type="text/javascript">
- 	var s = "::::::    v0.1. 131 <div id='id_div_toolBar' style ='float:right;'></div> ";
+ 	var s = "::::::    v0.1. 143 <div id='id_div_toolBar' style ='float:right;'></div> ";
 	var d 	= blo0.blMDiv(document.body, "id_div_CXdMainFrame_ui" ,s,0, 88 ,550,50,blColor[1]);
 
 	var s4Player = "<div id='skPlayer-wrap'><div id= 'skp-ctrl' >Music</div><div id='skPlayer'></div></div>";	
@@ -91,3 +92,14 @@ document.onclick = function(e){
 </script>
 
 <script src="blLrc.js" type="text/javascript"></script>
+<script  type="text/javascript">
+
+var myLrc = "http://www.beautifullover.org/lrcTest.js";
+if(myLrc) blo0.blScript("id_script_lrcdata",myLrc);
+function loadLyricOK(){ 
+	var l = document.getElementById("lrcdata");
+	lrcobj = new blLrcClass(l.innerHTML,QueryString.t,QueryString.f);
+	lrcobj.blRun(lrcobj);
+}
+
+</script>
