@@ -1,24 +1,16 @@
 
-
 function _blVMPlayer()
 {
 	var nTime = 0; 
 	var _myFun = function(_this){
-		return function(){
-			//nTime += 0.01;
+		return function(){			//nTime += 0.01;
 			var x = document.getElementsByTagName("audio");
 			nTime = x[0].currentTime;
 		}
 	}(this);
 
-	this.blrPlay = function()
-	{
-		setInterval(_myFun,10);
-	}
-	this.blrGetCP = function()
-	{
-		return nTime;
-	}
+	this.blrPlay = function()	{	setInterval(_myFun,10);	}
+	this.blrGetCP = function()	{	return nTime;	}
 }
 
 var lrcTimer0;
@@ -109,7 +101,7 @@ function loadLyricOK(){
 
 function blLrcClass (tt,xt,f)
 {	
-	var xdVer	= " blLrcClass ： v1.1. 34 ";
+	var xdVer	= " blLrcClass ： v1.1. 35 ";
   var _CreateUI = function(f)
   { 
 	var divMP = o.blDiv(xdPlayerDiv,"mp1","xdxdxd","red"); 
@@ -127,7 +119,7 @@ function blLrcClass (tt,xt,f)
 		s += "<a target='_blank' href='https://github.com/littleflute/beautifullover.org/edit/master/blLrc.js'"
 		s += " style='color:lightblue;'";
 		s +=">";
-		s += " lrc.js*  ";
+		s += " blLrc.js*  ";
 		s += "</a>"; 
 		s += "<a target='_blank' href='blLrc.js'"
 		s += " style='color:yellow;'";
