@@ -16,7 +16,7 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 222 ";
+	var xdVer	= " blLrcClass :: v1.1. 224 ";
   var _CreateLyrBoard2 = function(oBoss)
   {	 
 		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
@@ -32,8 +32,8 @@ function blLrcClass (tt, _nIdx , blID )
 		s += '<div id="lrcollbox" style="overflow:hidden; height:260; width:660; background-color:#59a;">'; 
 		s += '<table border="1" cellspacing="0" cellpadding="0" width="100%" id="lrcoll"';
 		s += ' style="position:relative; top: -20px;" oncontextmenu="return false;">';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt1"></td></tr>';
-		s += '<tr><td nowrap height="20" align="center" id="lrcwt2"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt1'+blID+'"></td></tr>';
+		s += '<tr><td nowrap height="20" align="center" id="lrcwt2'+blID+'"></td></tr>';
 		s += '<tr><td nowrap height="20" align="center" id="lrcwt3"></td></tr>';
 		s += '<tr><td nowrap height="20" align="center" id="lrcwt4"></td></tr>';
 		s += '<tr><td nowrap height="20" align="center" id="lrcwt5"></td></tr>';
@@ -264,8 +264,8 @@ function blLrcClass (tt, _nIdx , blID )
       this.dts = this.inr[ii].t[0];
       this.dte = (ii<this.inr.length-1)?this.inr[ii+1].t[0]:xdCP;
 
-      lrcwt1.innerText = this.retxt(ii-7);
-      lrcwt2.innerText = this.retxt(ii-6);
+      ("lrcwt1"+blID).innerText = this.retxt(ii-7);
+      ("lrcwt2"+blID).innerText = this.retxt(ii-6);
       lrcwt3.innerText = this.retxt(ii-5);
       lrcwt4.innerText = this.retxt(ii-4);
       lrcwt5.innerText = this.retxt(ii-3);
@@ -326,8 +326,8 @@ function blLrcClass (tt, _nIdx , blID )
   }
   
   this.blSetTxt("?米赤3?Y??車D?角1??豕∩那...");
-  lrcwt1.innerText = "111111111111111111";
-  lrcwt2.innerText = "";
+  ("lrcwt1"+blID).innerText = "111111111111111111";
+  ("lrcwt2"+blID).innerText = "";
   lrcwt3.innerText = "";
   lrcwt4.innerText = "";
   lrcwt5.innerText = "";
