@@ -16,7 +16,7 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 241 ";
+	var xdVer	= " blLrcClass :: v1.1. 244 ";
   var _CreateLyrBoard2 = function(oBoss)
   {	 
 		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
@@ -49,9 +49,9 @@ function blLrcClass (tt, _nIdx , blID )
 
 		s += '<tr style="color:#BDB76B;">';
 			s += '<td nowrap height="20">';
-					s += '<div id="xdwrap">';
-					s += '<div id="lrcbox" style="overflow:hidden;position:relative; width:100%; color:#800000; height:20">?豕∩那?車???D ...</div>';
-					s += '<div id="idMovingLyr" style="overflow:hidden;position:relative;top: -20px; width:0; color:#FFFF33; height:20">?豕∩那?車???D ...</div>';
+					s += '<div>';
+					s += '<div id="lrcbox'+blID+'" style="overflow:hidden;position:relative; width:100%; color:#800000; height:20">?豕∩那?車???D ...</div>';
+					s += '<div id="idMovingLyr'+blID+'" style="overflow:hidden;position:relative;top: -20px; width:0; color:#FFFF33; height:20">?豕∩那?車???D ...</div>';
 					s += '</div>';
 				s += '</td></tr>'; 
  
@@ -92,8 +92,7 @@ function blLrcClass (tt, _nIdx , blID )
 			nMyTimer++;
 			s += nMyTimer;
 			var playerObj = document.getElementById("idLyricMP");
-			s += " blVMP.blrGetCP = " + blVMP.blrGetCP();
-			s += "idMovingLyr.style.top = " + idMovingLyr.style.top;
+			s += " blVMP.blrGetCP = " + blVMP.blrGetCP(); 
 			s += "<br>";
 			d.innerHTML = s;
 			_this.xdRun(playerObj);
@@ -177,7 +176,7 @@ function blLrcClass (tt, _nIdx , blID )
   this.dlt = -1;
   this.ddh;
   this.fjh;
-  idMovingLyr.style.width = 0;
+  bl$("idMovingLyr"+blID).style.width = 0;
   if(/\[offset\:(\-?\d+)\]/i.test(tt))
     this.oTime = RegExp.$1/1000;
 
@@ -217,9 +216,9 @@ function blLrcClass (tt, _nIdx , blID )
       this.inr[ii].t[this.inr[ii].t.length] = tse-this.oTime;
     }
 
-    idMovingLyr.innerHTML = "<font>"+ this.inr[ii].n.replace(/&/g,"&").replace(/</g,"<").replace(/>/g,">").replace(/%=%/g,"</font><font>") +"</font>";
+    bl$("idMovingLyr"+blID).innerHTML = "<font>"+ this.inr[ii].n.replace(/&/g,"&").replace(/</g,"<").replace(/>/g,">").replace(/%=%/g,"</font><font>") +"</font>";
  
-    var fall = idMovingLyr.getElementsByTagName("font");
+    var fall = bl$("idMovingLyr"+blID).getElementsByTagName("font");
     for(var wi=0; wi<fall.length; wi++)
       this.inr[ii].w[this.inr[ii].w.length] = fall[wi].offsetWidth;
   }
@@ -309,9 +308,9 @@ function blLrcClass (tt, _nIdx , blID )
     var sc = ((ki<this.ddh.length)?this.ddh[ki]:this.dte) - this.ddh[kt];
     var tc = xdCP - this.ddh[kt];
     bbw -= this.fjh[kt] - tc / sc * this.fjh[kt];
-    if(bbw>lrcbox.offsetWidth)
-      bbw = lrcbox.offsetWidth;
-    idMovingLyr.style.width = Math.round(bbw);
+    if(bbw>bl$("lrcbox"+blID).offsetWidth)
+      bbw = bl$("lrcbox"+blID).offsetWidth;
+    bl$("idMovingLyr"+blID).style.width = Math.round(bbw);
   }
 
   this.retxt = function(i)
@@ -321,8 +320,8 @@ function blLrcClass (tt, _nIdx , blID )
 
   this.blSetTxt = function(txt)
   {
-    lrcbox.innerText		= txt;
-    idMovingLyr.innerText	= txt;
+    bl$("lrcbox"+blID).innerText		= txt;
+    bl$("idMovingLyr"+blID).innerText	= txt;
   }
   
   this.blSetTxt("?米赤3?Y??車D?角1??豕∩那...");
