@@ -44,7 +44,7 @@ function loadLyricOK(){
 
 function blLrcClass (tt,xt,f)
 {	
-	var xdVer	= " blLrcClass :: v1.1. 44 ";
+	var xdVer	= " blLrcClass :: v1.1. 52 ";
   var _CreateUI = function(f)
   { 
 	var divMP = blo0.blDiv(document.body, "mp1","xdxdxd","red"); 
@@ -106,28 +106,14 @@ function blLrcClass (tt,xt,f)
 	var o = new blClass;
 	var blVMP = new _blVMPlayer;
 	
-  
-	function _makeMPObj (strURL) {
-		var strHtml;	
-		strHtml ="<object id='idLyricMP' width='400' height='64' classid='clsid:6bf52a52-394a-11d3-b153-00c04f79faa6'>";
-    	strHtml+="<param name='url' value=\""+ strURL +"\">";
-    	strHtml+="<param name='volume' value='10'>";
-    	strHtml+="<param name='loop' value='true'>";
-    	strHtml+="<param name='autoStart' value='0'>";
-		strHtml+="</object>";     
-		return strHtml;
-	}	
-
+   
 	function _InitPlayer(t,oDivBoss,strURL) { 
 		switch(t)
 		{
 		case 3:
 			oDivBoss.innerHTML = "No Real Player v0.0.11";
 			blVMP.blrPlay();
-			break;
-		case 4:
-			oDivBoss.innerHTML = _makeMPObj(strURL);
-			break;
+			break; 
 		case 5:
 			o.blAudio(oDivBoss,"idLyricMP",strURL); 
 			var playerObj = document.getElementById("idLyricMP");
