@@ -1,18 +1,4 @@
 
-function _blVMPlayer()
-{
-	var nTime = 0; 
-	var _myFun = function(_this){
-		return function(){			//nTime += 0.01;
-			var x = document.getElementsByTagName("audio");
-			nTime = x[0].currentTime;
-		}
-	}(this);
-
-	this.blrPlay = function()	{	setInterval(_myFun,10);	}
-	this.blrGetCP = function()	{	return nTime;	}
-}
-
 var lrcTimer0;
 var lrcTimer1;
 var xdMin;
@@ -28,15 +14,15 @@ function _golrcolor(t)
 			lrcTimer0 = setTimeout("_golrcoll("+s+")",xdMin*10);
   }
     
-function blLrcClass (tt,xt,f)
+function blLrcClass (tt,xt, blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 114 ";
-  var _CreateUI = function(f)
+	var xdVer	= " blLrcClass :: v1.1. 132 ";
+  var _CreateUI = function( _id )
   { 
-	var divMP = blo0.blDiv(document.body, "mp1","xdxdxd","red"); 
-	_InitPlayer(xdType,divMP,f); 
 
 	var d 	= blo0.blMDiv(document.body, "id_div_4_Lyric_ui" ,s, 444 , 111 ,850,50,blColor[2]); 
+	var divMP = blo0.blDiv(d, "mp1","xdxdxd","red"); 
+	_InitPlayer(xdType,divMP, _id ); 
 	var xddbgDiv = o.blDiv(d,"xddbgLyric",xdVer,"gold");
 	var MyTimer = o.blDiv(d,"idMyTimer","idMyTimer");
 	_CreateLyrBoard2(d);
@@ -81,32 +67,20 @@ function blLrcClass (tt,xt,f)
 	};
 	
 	this.bll1 = "bll1--------";
- 
-	var _xdTestFile = f; 
-	var xdType = 4; //5 - html5; 4 - vc6; 3 - No Real Player;
-	if (xt==undefined) xdType = 3;
-	
-	if (xt==5) xdType = 5;
-	if (xt==4) xdType = 4;
-	if (xt==3) xdType = 3;
+  
+	var xdType = 3;
+
 	var o = new blClass;
-	var blVMP = new _blVMPlayer;
-	
+	var blVMP = new _blVMPlayer;	
    
-	function _InitPlayer(t,oDivBoss,strURL) { 
+	function _InitPlayer(t,oDivBoss, _id ) { 
 		switch(t)
 		{
 		case 3:
-			oDivBoss.innerHTML = "No Real Player v0.0.11";
+			oDivBoss.innerHTML = "ID: " + _id ;
 			blVMP.blrPlay();
-			break; 
-		case 5:
-			o.blAudio(oDivBoss,"idLyricMP",strURL); 
-			var playerObj = document.getElementById("idLyricMP");
-			playerObj.volume = .1;
-			break;
+			break;  
 		} 
-
 	}
   var nMyTimer = 0;
   this.TimerFun = function(_this)
@@ -149,10 +123,7 @@ function blLrcClass (tt,xt,f)
 		var d1 = o.blDiv(oBoss,oBoss.id+"_div_song_right_now",QueryString.f,blColor[2]); 
 		var url = QueryString.l;
 		var d2 = o.blDiv(oBoss,oBoss.id+"_div_lrc_right_now",url,blColor[4]); 
-		var lrcLink = blo0.blLink(oBoss,oBoss.id+"lrcLink","lrc_src",url,blColor[3]);
-		var url = QueryString.j;
-		var d3 = o.blDiv(oBoss,oBoss.id+"_div_list_right_now",url,blColor[6]); 
-		var listLink = blo0.blLink(oBoss,oBoss.id+"listLink","list_src",url,blColor[8]);
+		var lrcLink = blo0.blLink(oBoss,oBoss.id+"lrcLink","lrc_src",url,blColor[3]); 
 		
 		var d2BodyContend = o.blDiv(oBoss,"d2BodyContend","d2BodyContend: V x.x.x",blColor[12]); 
 
@@ -196,7 +167,7 @@ function blLrcClass (tt,xt,f)
 		
 		d2BodyContend.innerHTML = s;
   } 
-  _CreateUI(_xdTestFile);
+  _CreateUI ( blID );
 
   this.inr = [];
   this.min = [];
@@ -377,5 +348,19 @@ function blLrcClass (tt,xt,f)
 		}
   }(this); 
 }//END: blLrcClass
+
+function _blVMPlayer()
+{
+	var nTime = 0; 
+	var _myFun = function(_this){
+		return function(){			//nTime += 0.01;
+			var x = document.getElementsByTagName("audio");
+			nTime = x[0].currentTime;
+		}
+	}(this);
+
+	this.blrPlay = function()	{	setInterval(_myFun,10);	}
+	this.blrGetCP = function()	{	return nTime;	}
+}
 
  
