@@ -14,17 +14,17 @@ function _golrcolor(t)
 			lrcTimer0 = setTimeout("_golrcoll("+s+")",xdMin*10);
   }
     
-function blLrcClass (tt,xt, blID )
+function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 132 ";
+	var xdVer	= " blLrcClass :: v1.1. 151 ";
   var _CreateUI = function( _id )
   { 
 
-	var d 	= blo0.blMDiv(document.body, "id_div_4_Lyric_ui" ,s, 444 , 111 ,850,50,blColor[2]); 
-	var divMP = blo0.blDiv(d, "mp1","xdxdxd","red"); 
+	var d 	= blo0.blMDiv(document.body, "id_div_4_Lyric_ui" + blID  , blID , 444, 111 + blID * 30 , 850,50,blColor[2]); 
+	var divMP = blo0.blDiv(d, "mp1" + blID ,"xdxdxd","red"); 
 	_InitPlayer(xdType,divMP, _id ); 
-	var xddbgDiv = o.blDiv(d,"xddbgLyric",xdVer,"gold");
-	var MyTimer = o.blDiv(d,"idMyTimer","idMyTimer");
+	var xddbgDiv = o.blDiv(d,"xddbgLyric" + blID ,xdVer,"gold");
+	var MyTimer = o.blDiv(d,"idMyTimer" ,"idMyTimer");
 	_CreateLyrBoard2(d);
   }
 	var _currentTime = 0;
