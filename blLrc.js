@@ -16,7 +16,7 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 151 ";
+	var xdVer	= " blLrcClass :: v1.1. 211 ";
   var _CreateUI = function( _id )
   { 
 
@@ -24,11 +24,31 @@ function blLrcClass (tt, _nIdx , blID )
 	var divMP = blo0.blDiv(d, "mp1" + blID ,"xdxdxd","red"); 
 	_InitPlayer(xdType,divMP, _id ); 
 	var xddbgDiv = o.blDiv(d,"xddbgLyric" + blID ,xdVer,"gold");
-	var MyTimer = o.blDiv(d,"idMyTimer" ,"idMyTimer");
+	var MyTimer = o.blDiv(d,"idMyTimer" +blID  , "timer:" );
 	_CreateLyrBoard2(d);
   }
 	var _currentTime = 0;
 
+  	var nMyTimer = 0;
+  this.TimerFun = function(_this)
+  {
+		return function(){ 
+			var d = document.getElementById("idMyTimer" + blID );
+			var s = " ";//d.innerHTML;
+			s += "_currentTime=";
+			s += _currentTime;
+			s += " nMyTimer= ";
+			nMyTimer++;
+			s += nMyTimer;
+			var playerObj = document.getElementById("idLyricMP");
+			s += " blVMP.blrGetCP = " + blVMP.blrGetCP();
+			s += "idMovingLyr.style.top = " + idMovingLyr.style.top;
+			s += "<br>";
+			d.innerHTML = s;
+			_this.xdRun(playerObj);
+		}
+  }(this);
+ 
 	this.blrAboutMe = function(b,d){		
 		var s = "";
 		s += "<a target='_blank' href='https://github.com/littleflute/beautifullover.org/edit/master/blLrc.js'"
@@ -82,26 +102,6 @@ function blLrcClass (tt, _nIdx , blID )
 			break;  
 		} 
 	}
-  var nMyTimer = 0;
-  this.TimerFun = function(_this)
-  {
-		return function(){ 
-			var d = document.getElementById("idMyTimer");
-			var s = " ";//d.innerHTML;
-			s += "_currentTime=";
-			s += _currentTime;
-			s += " nMyTimer= ";
-			nMyTimer++;
-			s += nMyTimer;
-			var playerObj = document.getElementById("idLyricMP");
-			s += " blVMP.blrGetCP = " + blVMP.blrGetCP();
-			s += "idMovingLyr.style.top = " + idMovingLyr.style.top;
-			s += "<br>";
-			d.innerHTML = s;
-			_this.xdRun(playerObj);
-		}
-  }(this);
- 
   var _CreateToolBar = function(oBoss)
   {	
 		var d = o.blDiv(oBoss,oBoss.id+"_div_ToolBar","_div_ToolBar: v0.0.7","white");
