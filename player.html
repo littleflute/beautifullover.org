@@ -101,9 +101,9 @@ if(myLrc) blo0.blScript("id_script_lrcdata",myLrc);
 function loadLyricOK(){ 
 	var l = document.getElementById("lrcdata");
 	for(var i=0; i<m.source.length;i++){
-		lrcobj = new blLrcClass(l.innerHTML,3,i);
+		lrcobj = new blLrcClass(document.body, l.innerHTML,3,i);
 		lrcobj.blRun(lrcobj);
 	}
 }
-bl$( "id_div_page_v" ).innerHTML = "v0.1. 315 ";
+bl$( "id_div_page_v" ).innerHTML = "v0.1. 321 ";
 </script>
