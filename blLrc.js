@@ -16,7 +16,17 @@ function _golrcolor(t)
     
 function blLrcClass (tt, _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 252 ";
+	var xdVer	= " blLrcClass :: v1.1. 254 ";
+	var blDivBoss 	= document.body;
+  var _CreateUI = function( _oBoss , _id )
+  {  
+	var d 	= blo0.blDiv( _oBoss , "id_div_4_Lyric_ui" + blID  , blID ,blColor[3]); 
+	var divMP = blo0.blDiv(d, "mp1" + blID ,"xdxdxd","red"); 
+	_InitPlayer(xdType,divMP, _id ); 
+	var xddbgDiv = o.blDiv(d,"xddbgLyric" + blID ,xdVer,"gold");
+	var MyTimer = o.blDiv(d,"idMyTimer" +blID  , "timer:" );
+	_CreateLyrBoard2(d);
+  }
   var _CreateLyrBoard2 = function(oBoss)
   {	 
 		var d2Body = o.blDiv(oBoss,"d2Body"+ blID ,"","DarkOrchid");
@@ -68,16 +78,6 @@ function blLrcClass (tt, _nIdx , blID )
 		
 		d2BodyContend.innerHTML = s;
   } 
-  var _CreateUI = function( _id )
-  { 
-
-	var d 	= blo0.blMDiv(document.body, "id_div_4_Lyric_ui" + blID  , blID , 444, 111 + blID * 30 , 850,50,blColor[2]); 
-	var divMP = blo0.blDiv(d, "mp1" + blID ,"xdxdxd","red"); 
-	_InitPlayer(xdType,divMP, _id ); 
-	var xddbgDiv = o.blDiv(d,"xddbgLyric" + blID ,xdVer,"gold");
-	var MyTimer = o.blDiv(d,"idMyTimer" +blID  , "timer:" );
-	_CreateLyrBoard2(d);
-  }
 	var _currentTime = 0;
 
   	var nMyTimer = 0;
@@ -166,7 +166,7 @@ function blLrcClass (tt, _nIdx , blID )
 		}(b1);
   }
 
-  _CreateUI ( blID );
+  _CreateUI ( blDivBoss , blID );
 
   this.inr = [];
   this.min = [];
