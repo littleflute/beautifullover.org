@@ -1,9 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <title>BeautifulLover</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="blLogo4github.png" type="image/x-icon">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -138,6 +139,36 @@ function w3_close() {
     mySidebar.style.display = "none";
     overlayBg.style.display = "none";
 }
+</script>
+<script src="https://littleflute.github.io/vc6/XdHtml/blclass.js" type="text/javascript"></script>
+
+<script>
+var s = 'blo0.blScript("id_script_1","https://littleflute.github.io/bldb1/1/1/1.js")';
+var blMD = blo0.blMDiv( document.body , "id_div_4_blClass" ,"[blClass]", 333 ,110,800,100, blGrey[1]);
+blMD.d1 = blo0.blDiv(blMD, blMD.id + "_d1","", blGrey[2]);
+blMD.d1.ta = blo0.blTextarea(blMD.d1,blMD.d1.id + "_ta", s , blGrey[1]);
+blMD.d1.ta.style.width 	= "95%";
+blMD.d1.ta.style.height = "200px";
+
+blMD.d2 = blo0.blDiv(blMD, blMD.id + "_d2","", blGrey[3]);
+blMD.btnRunJS = blo0.blBtn(blMD.d2, blMD.d2.id + "_btnRunJS","run", blColor[4]);
+blMD.btnRunJS.onclick = function(){
+	eval(blMD.d1.ta.value);
+}
+blMD.btnTa = blo0.blBtn(blMD.d2, blMD.d2.id + "_btnTa","ta", blColor[4]);
+blMD.btnTa.onclick = function(){
+  if(!this.d){
+	var blMD = blo0.blMDiv( this.parentElement , "id_div_4_ta" ,"[blClass]", 333 ,110,800,100, blGrey[1]);
+	blMD.d1 = blo0.blDiv(blMD, blMD.id + "_d1","", blGrey[2]);
+	blMD.d1.ta = blo0.blTextarea(blMD.d1, "id_ta_bldb", s , blGrey[1]);
+	blMD.d1.ta.style.width 	= "95%";
+	blMD.d1.ta.style.height = "200px";
+    this.d = blMD;
+  }
+  _on_off_div(this,this.d);
+}
+//;
+
 </script>
 
 </body>
