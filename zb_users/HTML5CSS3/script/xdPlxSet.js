@@ -1,7 +1,7 @@
 
 
 function _xdPlxSetClass(){
-	var v 		= "v0.0. 52 ";
+	var v 		= "v0.0. 53 ";
 	var name 	= "_xdPlxSetClass";
 	var _view	= null;
 	var _loadTimes	= 0;
@@ -36,6 +36,13 @@ function _xdPlxSetClass(){
 		_createUI(this);
 	}
 	var _setObj = null;
+	this.blr2DoList = function( blrSetB , blrSetV ){ 
+		if(!blrSetV .v){
+			blrSetV .v = blo0.blMDiv( document.body , "id_div_4_2DoList" ,"2DoList",210,0,800,100,blColor[1]);
+			blrSetV .v.d = blo0.blDiv( blrSetV .v,blrSetV .v.id + "d","...",blColor[2]); 
+		}
+		_on_off_div(blrSetB,blrSetV.v);
+	}
 	this.blrShowBlClass = function( blrSetB , blrSetV ){ 
 		if(!blrSetV .v){
 			blrSetV .v = blo0.blMDiv( document.body , "id_div_4_blClass" ,"[blClass]",210,0,800,100,blColor[1]);
