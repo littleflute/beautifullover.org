@@ -26,20 +26,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <body>
 
 <!-- Navbar -->
-<div id = "id_Navbar" class="w3-top">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-theme-l1">BeautifulLover</a>
-    <a target="_blank" href="https://github.com/littleflute/beautifullover.org/edit/master/index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">
-    V0.0.21</a>
-    <a target="_blank" href="https://github.com/littleflute/blog/issues/704" class="w3-bar-item w3-button w3-hide-small w3-hover-white">issue</a>
-    <a target="_blank" href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_webpage&stacked=h" class="w3-bar-item w3-button w3-hide-small w3-hover-white">TryIt</a>
-    <a target="_blank" href="https://www.w3schools.com/w3css/tryw3css_templates_webpage.htm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ref</a>
-    <a target="_blank" href="http://13.ggu.cn:2222/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Admin</a>
-    <a target="_blank" href="https://littleflute.github.io/blog/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">blog</a>
-    
-  </div>
-</div>
+<div id = "id_Navbar" class="w3-top"></div>
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
@@ -148,7 +135,7 @@ function w3_close() {
 
 <script>
 var s = 'blo0.blScript("id_script_1","https://littleflute.github.io/bldb1/1/1/1.js")';
-var blMD = blo0.blMDiv( document.body , "id_div_4_blClass" ,"[blClass]", 333 ,110,800,100, blGrey[1]);
+var blMD = blo0.blMDiv( document.body , "id_div_4_blClass" ,"runJS_v0.0.2", 333 ,110,800,100, blGrey[1]);
 blMD.d1 = blo0.blDiv(blMD, blMD.id + "_d1","", blGrey[2]);
 blMD.d1.ta = blo0.blTextarea(blMD.d1,blMD.d1.id + "_ta", s , blGrey[1]);
 blMD.d1.ta.style.width 	= "95%";
@@ -175,6 +162,19 @@ blMD.btnLoadTemplate = blo0.blBtn(blMD.d2, blMD.d2.id + "_btnLoadTemplate","Temp
 blMD.btnLoadTemplate.onclick = function(){
   alert("btnLoadTemplate");
 }
+
+
+function loadTemplate(o) {
+var a = o[0].body;
+var b = a.split("~~~html");
+var c = b[1].split("~~~");
+var nb = bl$("id_Navbar");
+nb.innerHTML = c[0]; 
+}
+w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/2/comments", loadTemplate);
+
+
+
 //;
 
 </script>
