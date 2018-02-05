@@ -1,7 +1,7 @@
-﻿
+
 
 function _xdPlxSetClass(){
-	var v 		= "v0.0. 44 ";
+	var v 		= "v0.0. 52 ";
 	var name 	= "_xdPlxSetClass";
 	var _view	= null;
 	var _loadTimes	= 0;
@@ -124,10 +124,10 @@ function _xdPlxSetClass(){
 		 
 		_on_off_div(blrSetB,blrSetV);
 	}
-	this.blrtAboutMe = function( b, v){
+	this.blrtAboutMe = function( b, d){
 		var s = ""; 
-		s += _blhMakeLink('blclass.js ','http://www.beautifullover.org/zb_users/theme/HTML5CSS3/script/xdPlxSet.js','color:skyblue;','_blank');
-		s += _blhMakeLink(' blclass.js*','https://github.com/littleflute/vc6/edit/master/XdHtml/blclass.js','color:skyblue;','_blank');
+		s += blo0.blhMakeLink ('xdPlxSet.js ','http://www.beautifullover.org/zb_users/theme/HTML5CSS3/script/xdPlxSet.js','color:skyblue;','_blank');
+		s += blo0.blhMakeLink (' xdPlxSet.js*','https://github.com/littleflute/beautifullover.org/edit/master/zb_users/HTML5CSS3/script/xdPlxSet.js','color:skyblue;','_blank');
 		d.innerHTML = s;
 		_on_off_div(b,d);		
 	}
