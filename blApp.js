@@ -1,5 +1,7 @@
+var sTitle = "<div id = 'id_div_APP_Title'>v0.0.22 </div>";
+
 var s = 'blo0.blScript("id_script_1","https://littleflute.github.io/bldb1/1/1/1.js")';
-var sTitle = "<div id = 'id_div_APP_Title'>v0.0.21 </div>";
+
 var blMD = blo0.blMDiv( document.body , "id_div_4_blClass" , sTitle, 333 ,110,800,100, blGrey[1]);
 blMD.d1 = blo0.blDiv(blMD, blMD.id + "_d1","", blGrey[2]);
 blMD.d1.ta = blo0.blTextarea(blMD.d1,blMD.d1.id + "_ta", s , blGrey[1]);
