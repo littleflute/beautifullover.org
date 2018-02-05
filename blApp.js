@@ -1,4 +1,4 @@
-var sTitle = "<div id = 'id_div_APP_Title'>v0.0.22 </div>";
+var sTitle = "<div id = 'id_div_APP_Title'>v0.0.23 </div>";
 
 var s = 'blo0.blScript("id_script_1","https://littleflute.github.io/bldb1/1/1/1.js")';
 
