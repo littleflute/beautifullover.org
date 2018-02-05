@@ -31,7 +31,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-theme-l1">BeautifulLover</a>
     <a target="_blank" href="https://github.com/littleflute/beautifullover.org/edit/master/index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">
-    V0.0.14</a>
+    V0.0.15</a>
     <a target="_blank" href="https://github.com/littleflute/blog/issues/704" class="w3-bar-item w3-button w3-hide-small w3-hover-white">issue</a>
     <a target="_blank" href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_webpage&stacked=h" class="w3-bar-item w3-button w3-hide-small w3-hover-white">TryIt</a>
     <a target="_blank" href="https://www.w3schools.com/w3css/tryw3css_templates_webpage.htm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ref</a>
@@ -170,6 +170,10 @@ blMD.btnTa.onclick = function(){
     this.d = blMD;
   }
   _on_off_div(this,this.d);
+}
+blMD.btnLoadTemplate = blo0.blBtn(blMD.d2, blMD.d2.id + "_btnLoadTemplate","Template", blColor[4]);
+blMD.btnLoadTemplate.onclick = function(){
+  alert("btnLoadTemplate");
 }
 //;
 
