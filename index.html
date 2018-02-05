@@ -135,7 +135,7 @@ function w3_close() {
 
 <script>
 var s = 'blo0.blScript("id_script_1","https://littleflute.github.io/bldb1/1/1/1.js")';
-var blMD = blo0.blMDiv( document.body , "id_div_4_blClass" ,"runJS_v0.0.2", 333 ,110,800,100, blGrey[1]);
+var blMD = blo0.blMDiv( document.body , "id_div_4_blClass" ,"runJS_v0.0.3", 333 ,110,800,100, blGrey[1]);
 blMD.d1 = blo0.blDiv(blMD, blMD.id + "_d1","", blGrey[2]);
 blMD.d1.ta = blo0.blTextarea(blMD.d1,blMD.d1.id + "_ta", s , blGrey[1]);
 blMD.d1.ta.style.width 	= "95%";
@@ -173,6 +173,21 @@ nb.innerHTML = c[0];
 }
 w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/2/comments", loadTemplate);
 
+ 
+var tb = blo0.blDiv(blMD,blMD.id + "tb","tb",blGrey[2]);
+tb.innerHTML = "tb";
+tb.load = blo0.blBtn(tb,tb.id + "btnLoad","loadAPI",blGrey[1]);
+tb.load.onclick = function(){
+  w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/3/comments", tb.load.loadApiOK);
+}
+tb.load.loadApiOK = function (o) {
+  
+  for(i in o){
+     var a = "var f = " + o[i].body;
+      tb.load.b1 = blo0.blBtn(tb,tb.load.id + "b" + i,"b" + i,blGrey[1]); 
+      tb.load.b1.onclick = function(){eval(a); return f;}();
+  }
+}
 
 
 //;
