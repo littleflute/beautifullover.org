@@ -1,7 +1,7 @@
 
 
 function _xdPlxSetClass(){
-	var v 		= "v0.0. 131 ";
+	var v 		= "v0.0. 133 ";
 	var name 	= "_xdPlxSetClass";
 	var _view	= null;
 	var _loadTimes	= 0;
@@ -53,7 +53,11 @@ function _xdPlxSetClass(){
 	}
 	this.blrAPIs = function( blrSetB , blrSetV ){ 
 		if(!blrSetV .v){
+			var href = "https://api.github.com/repos/littleflute/beautifullover.org/issues/6/comments";			
+
 			blrSetV .v = blo0.blMDiv( blrSetV  , blrSetV.id + "_APIs" ,"APIs",210,0,800,100, blGrey[0]);
+			var s4do = "<a href='" + href + "' target='_blank'>apiHREF</a>";
+			blrSetV .v.d0 = blo0.blDiv( blrSetV .v,blrSetV .v.id + "d0", s4do , blGrey[2]); 
 			blrSetV .v.d = blo0.blDiv( blrSetV .v,blrSetV .v.id + "d","...", blGrey[2]); 
 
 			function _loadAPIs (o) {
@@ -64,7 +68,13 @@ function _xdPlxSetClass(){
 							if(!this.v){
 								this.v = blo0.blDiv( _d , this.id + "_v", "apiV", blGrey[2]); 											this.v.b = blo0.blBtn( this.v , this.v.id + "_btn", "run", "green"); 
 								this.v.b.onclick = function(){
-									alert(_txt);
+									var a = _txt;
+									var b = a.split("api:");
+									var c = " var f = " + b[1];
+									alert(c);
+									;
+									;
+
 								};			
 							}			
 							_on_off_div(this,this.v);
@@ -72,7 +82,7 @@ function _xdPlxSetClass(){
 					}(blrSetV.v.d,o[i].body); 
  				}
 			}
-			w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/6/comments", _loadAPIs );
+			w3.getHttpObject( href , _loadAPIs );
 		}
 		_on_off_div(blrSetB,blrSetV.v);
 	}
