@@ -1,7 +1,7 @@
 
 
 function _xdPlxSetClass(){
-	var v 		= "v0.0. 53 ";
+	var v 		= "v0.0. 121 ";
 	var name 	= "_xdPlxSetClass";
 	var _view	= null;
 	var _loadTimes	= 0;
@@ -38,8 +38,26 @@ function _xdPlxSetClass(){
 	var _setObj = null;
 	this.blr2DoList = function( blrSetB , blrSetV ){ 
 		if(!blrSetV .v){
-			blrSetV .v = blo0.blMDiv( document.body , "id_div_4_2DoList" ,"2DoList",210,0,800,100,blColor[1]);
+			blrSetV .v = blo0.blMDiv( blrSetV  , blrSetV.id + "_2DoList" ,"2DoList",210,0,800,100,blColor[1]);
 			blrSetV .v.d = blo0.blDiv( blrSetV .v,blrSetV .v.id + "d","...",blColor[2]); 
+
+			function _loadList (o) {
+				for(i in o){
+					var d = blo0.blDiv( blrSetV .v.d,blrSetV .v.d + "d" + i,"...",blColor[i]); 
+					d.innerHTML = o[i].body;
+ 				}
+			}
+			w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/5/comments", _loadList );
+		}
+		_on_off_div(blrSetB,blrSetV.v);
+	}
+	this.blrRunJS = function( blrSetB , blrSetV ){ 
+		if(!blrSetV .v){
+			blrSetV .v = blo0.blMDiv( blrSetV  , blrSetV.id + " _RunJS" ," RunJS ",210,0,800,100, blGrey[0]);
+			blrSetV .v.d = blo0.blDiv( blrSetV .v,blrSetV .v.id + "d","", blGrey[2]); 
+			blrSetV .v.ta = blo0.blTextarea( blrSetV .v.d,blrSetV .v.d.id + "ta","alert(1);", blGrey[3]); blrSetV .v.ta.style.width = "95%";
+			blrSetV .v.btnRun = blo0.blBtn( blrSetV .v.d,blrSetV .v.d.id + "btnRun","run", "green");
+			blrSetV .v.btnRun.onclick = function(){eval(blrSetV .v.ta.value);};
 		}
 		_on_off_div(blrSetB,blrSetV.v);
 	}
