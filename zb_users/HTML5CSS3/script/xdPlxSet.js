@@ -1,7 +1,7 @@
 
 
 function _xdPlxSetClass(){
-	var v 		= "v0.0. 125 ";
+	var v 		= "v0.0. 131 ";
 	var name 	= "_xdPlxSetClass";
 	var _view	= null;
 	var _loadTimes	= 0;
@@ -62,7 +62,10 @@ function _xdPlxSetClass(){
 					b.onclick = function( _d , _txt){
 						return function(){
 							if(!this.v){
-								this.v = blo0.blDiv( _d , this.id + "_v", _txt, blGrey[2]); 			
+								this.v = blo0.blDiv( _d , this.id + "_v", "apiV", blGrey[2]); 											this.v.b = blo0.blBtn( this.v , this.v.id + "_btn", "run", "green"); 
+								this.v.b.onclick = function(){
+									alert(_txt);
+								};			
 							}			
 							_on_off_div(this,this.v);
 						}
