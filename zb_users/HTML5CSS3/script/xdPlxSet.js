@@ -1,7 +1,7 @@
 
 
 function _xdPlxSetClass(){
-	var v 		= "v0.0. 133 ";
+	var v 		= "v0.0. 134 ";
 	var name 	= "_xdPlxSetClass";
 	var _view	= null;
 	var _loadTimes	= 0;
@@ -71,8 +71,8 @@ function _xdPlxSetClass(){
 									var a = _txt;
 									var b = a.split("api:");
 									var c = " var f = " + b[1];
-									alert(c);
-									;
+									eval(c);
+									f();
 									;
 
 								};			
