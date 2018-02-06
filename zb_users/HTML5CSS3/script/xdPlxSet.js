@@ -1,7 +1,7 @@
 
 
 function _xdPlxSetClass(){
-	var v 		= "v0.0. 121 ";
+	var v 		= "v0.0. 125 ";
 	var name 	= "_xdPlxSetClass";
 	var _view	= null;
 	var _loadTimes	= 0;
@@ -43,11 +43,33 @@ function _xdPlxSetClass(){
 
 			function _loadList (o) {
 				for(i in o){
-					var d = blo0.blDiv( blrSetV .v.d,blrSetV .v.d + "d" + i,"...",blColor[i]); 
+					var d = blo0.blDiv( blrSetV .v.d,blrSetV .v.d + "_2Do_" + i,"...",blColor[i]); 
 					d.innerHTML = o[i].body;
  				}
 			}
 			w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/5/comments", _loadList );
+		}
+		_on_off_div(blrSetB,blrSetV.v);
+	}
+	this.blrAPIs = function( blrSetB , blrSetV ){ 
+		if(!blrSetV .v){
+			blrSetV .v = blo0.blMDiv( blrSetV  , blrSetV.id + "_APIs" ,"APIs",210,0,800,100, blGrey[0]);
+			blrSetV .v.d = blo0.blDiv( blrSetV .v,blrSetV .v.id + "d","...", blGrey[2]); 
+
+			function _loadAPIs (o) {
+				for(i in o){
+					var b = blo0.blBtn ( blrSetV .v.d,blrSetV .v.d + "_API_" + i,"api"+i,blColor[i]); 
+					b.onclick = function( _d , _txt){
+						return function(){
+							if(!this.v){
+								this.v = blo0.blDiv( _d , this.id + "_v", _txt, blGrey[2]); 			
+							}			
+							_on_off_div(this,this.v);
+						}
+					}(blrSetV.v.d,o[i].body); 
+ 				}
+			}
+			w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/6/comments", _loadAPIs );
 		}
 		_on_off_div(blrSetB,blrSetV.v);
 	}
