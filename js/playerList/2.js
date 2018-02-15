@@ -1,6 +1,6 @@
 
 // 2.js
-var s = 'playerList_2_V0.0.14';
+var s = 'playerList_2_V0.0.15';
 s += '<a href="https://github.com/littleflute/beautifullover.org/edit/master/js/playerList/2.js" target="_blank">2.js*</a> - '; 
 s += '<a href="https://littleflute.github.io/beautifullover.org/js/playerList/2.js" target="_blank">2.js</a>';
 
@@ -25,7 +25,7 @@ var m = {
 },
 
 {
-	name: 'Led Zeppelin IV',
+	name: '03/Led Zeppelin IV',
 	author: 'Led Zeppelin',
 	src: 'https://littleflute.github.io/Led-Zeppelin1/152/cd1/03_曲目 3.mp3',
 	cover: 'https://littleflute.github.io/Led-Zeppelin1/152/index.jpg'
@@ -33,10 +33,10 @@ var m = {
 
 
 {
-	name: '04 Bend Down Low.mp3',
-	author: 'BobMarley',
-	src: 'https://littleflute.github.io/BobMarley/B%20Is%20for%20Bob/04 Bend Down Low.mp3',
-	cover: 'https://littleflute.github.io/BobMarley/B%20Is%20for%20Bob/AlbumArt_{7666695E-5B42-46D5-9567-CA01B5E97B32}_Large.jpg'
+	name: '04/Led Zeppelin IV',
+	author: 'Led Zeppelin',
+	src: 'https://littleflute.github.io/Led-Zeppelin1/152/cd1/03_曲目 3.mp3',
+	cover: 'https://littleflute.github.io/Led-Zeppelin1/152/index.jpg'
 },
 
 ]
