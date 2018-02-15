@@ -1,8 +1,19 @@
 // index.js 
 
 function _blPlayerListIndexClass(){
-  var _v = "v0.0.22";
+  var _v = "v0.0.23";
   this.v = _v;
+  this.blrIndex = function(b,d){
+    //
+    if(!d.v){
+      var s = '';
+      s += '<a href="?l=https://littleflute.github.io/beautifullover.org/js/playerList/1.js">1.js</a> <br> '; 
+      s += '<a href="?l=https://littleflute.github.io/beautifullover.org/js/playerList/2.js">2.js</a> <br> ';  
+      d.v = blo0.blDiv(d,d.id+"v",s,blGrey[1]);
+    }
+    _on_off_div(b,d.v);
+    
+  }
   this.blrAboutMe = function(b,d){
     if(!d.v){
       var s = 'playerList_index_' + _v;
