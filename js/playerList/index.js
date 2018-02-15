@@ -1,7 +1,7 @@
 // index.js 
 
 function _blPlayerListIndexClass(){
-  this.v = "v0.0.2";
+  this.v = "v0.0.3";
 }
 
 var _wrap = bl$("id_mdiv_ListUI");
