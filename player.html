@@ -16,6 +16,7 @@
 </style>
 
 <script type="text/javascript">
+var xdDbgObj = null;
  	var s = "<div id='id_div_toolBar' style ='float:right;'></div> ";
 //	var d 	= blo0.blMDiv(document.body, "id_div_CXdMainFrame_ui" ,s,0, 88 ,550,50,blColor[1]);
 	var d 	= blo0.blDiv(document.body, "id_div_CXdMainFrame_ui" ,s , blColor[1]);
@@ -28,8 +29,9 @@
 	tb.b1 = blo0.blBtn(tb,tb.id+"b1","b1",blGrey[0]); 
 	tb.b1.onclick = function(){
 		if(!tb.b1.d){
-			tb.b1.d = blo0.blDiv(bl$("id_div_CXdMainFrame_ui"),"id_dbg", "dbg:",blColor[5]);
-			blo0.blShowObj2Div( tb.b1.d , player);
+			tb.b1.d = blo0.blMDiv(bl$("id_div_CXdMainFrame_ui"),"id_dbg", "xdDbg_v0.0.3",300,20,500,400,blColor[5]);
+			tb.b1.d.v = blo0.blDiv(tb.b1.d,tb.b1.d.id + "v", "v",blColor[4]);
+			blo0.blShowObj2Div( tb.b1.d.v , xdDbgObj );
 		}
 		 _on_off_div(this,this.d);
 	}
@@ -40,6 +42,7 @@
 <script src="http://www.beautifullover.org/zb_users/plugin/skPlayer/skPlayer.min.js"></script>
 <script> 
 blo0.blScript("id_script_playerList_1", "https://littleflute.github.io/beautifullover.org/js/playerList/1.js" );
+ 
 function loadPlayerListOK (){ 
 	var player = new skPlayer(p); 
 	var skpShow = 1;
@@ -52,6 +55,7 @@ function loadPlayerListOK (){
     		var _tar = skpWrap;
     	if(!(target == _tar) && ! _tar.contains(target)){skpWrap.className='';}
 	}
+	xdDbgObj  = player;
 }
 
 
@@ -69,5 +73,5 @@ function loadLyricOK(){
 		lrcobj.blRun(lrcobj);
 	}
 }
-bl$( "id_div_page_v" ).innerHTML = "v0.2. 11 ";
+bl$( "id_div_page_v" ).innerHTML = "v0.2. 32 ";
 </script>
