@@ -1,7 +1,7 @@
 // index.js 
 
 function _blPlayerListIndexClass(){
-  this.v = "v0.0.5";
+  this.v = "v0.0.11";
   this.blrAboutMe = function(b,d){
     if(!d.v){
       var s = 'playerList_1_V0.0.13';
