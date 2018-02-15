@@ -1,6 +1,6 @@
 
 // 2.js
-var s = 'playerList_2_V0.0.15';
+var s = 'playerList_2_V0.0.21';
 s += '<a href="https://github.com/littleflute/beautifullover.org/edit/master/js/playerList/2.js" target="_blank">2.js*</a> - '; 
 s += '<a href="https://littleflute.github.io/beautifullover.org/js/playerList/2.js" target="_blank">2.js</a>';
 
@@ -35,7 +35,7 @@ var m = {
 {
 	name: '04/Led Zeppelin IV',
 	author: 'Led Zeppelin',
-	src: 'https://littleflute.github.io/Led-Zeppelin1/152/cd1/03_曲目 3.mp3',
+	src: 'https://littleflute.github.io/Led-Zeppelin1/152/cd1/04_曲目 4.mp3',
 	cover: 'https://littleflute.github.io/Led-Zeppelin1/152/index.jpg'
 },
 
