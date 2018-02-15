@@ -16,17 +16,19 @@
 </style>
 
 <script type="text/javascript">
+var listFile = QueryString.l;
+
 var xdDbgObj = null;
- 	var s = "<div id='id_div_toolBar' style ='float:right;'></div> ";
-//	var d 	= blo0.blMDiv(document.body, "id_div_CXdMainFrame_ui" ,s,0, 88 ,550,50,blColor[1]);
+ 	var s = "<div id='id_div_toolBar' style ='float:right;'></div> "; 
 	var d 	= blo0.blDiv(document.body, "id_div_CXdMainFrame_ui" ,s , blColor[1]);
 
 	var s4Player = "<div id='skPlayer-wrap'><div id= 'skp-ctrl' >Music</div><div id='skPlayer'></div></div>";	
-	var w = blo0.blDiv(d,"", s4Player ,blColor[4]);	 
+	var w = blo0.blDiv(d,"", s4Player ,blColor[3]);	 
 
-	var tb = bl$('id_div_toolBar');
+	var tb = bl$('id_div_toolBar'); 
+	tb.btn4List = blo0.blBtn(tb, tb.id + " btn4List " , "list:" + listFile , blColor[1]); 
 	tb.b0 = blo0.blBtn(tb, "id_div_page_v" ,"b0",blColor[2]); 
-	tb.b1 = blo0.blBtn(tb,tb.id+"b1","b1",blGrey[0]); 
+	tb.b1 = blo0.blBtn(tb,tb.id+"b1","dbg",blGrey[0]); 
 	tb.b1.onclick = function(){
 		if(!tb.b1.d){
 			tb.b1.d = blo0.blMDiv(bl$("id_div_CXdMainFrame_ui"),"id_dbg", "xdDbg_v0.0.3",300,20,500,400,blColor[5]);
@@ -73,5 +75,5 @@ function loadLyricOK(){
 		lrcobj.blRun(lrcobj);
 	}
 }
-bl$( "id_div_page_v" ).innerHTML = "v0.2. 32 ";
+bl$( "id_div_page_v" ).innerHTML = "v0.2. 41 ";
 </script>
