@@ -1,6 +1,8 @@
 
 <script src="https://littleflute.github.io/vc6/XdHtml/blclass.js" type="text/javascript"></script>
 <a target="_blank" href="https://github.com/littleflute/beautifullover.org/edit/master/player.html" >player.html*</a>	
+<a href="?l=" >player.html</a>	
+<a href="?l=https://littleflute.github.io/beautifullover.org/js/playerList/1.js" >?l=1.js</a>	
 
 <style>
 
@@ -43,7 +45,9 @@ var xdDbgObj = null;
 
 <script src="http://www.beautifullover.org/zb_users/plugin/skPlayer/skPlayer.min.js"></script>
 <script> 
-blo0.blScript("id_script_playerList_1", "https://littleflute.github.io/beautifullover.org/js/playerList/1.js" );
+
+// "https://littleflute.github.io/beautifullover.org/js/playerList/1.js"
+blo0.blScript("id_script_playerList_1", listFile );
  
 function loadPlayerListOK (){ 
 	var player = new skPlayer(p); 
@@ -75,5 +79,5 @@ function loadLyricOK(){
 		lrcobj.blRun(lrcobj);
 	}
 }
-bl$( "id_div_page_v" ).innerHTML = "v0.2. 41 ";
+bl$( "id_div_page_v" ).innerHTML = "v0.2. 44 ";
 </script>
