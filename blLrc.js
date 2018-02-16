@@ -14,10 +14,10 @@ function _golrcolor(t)
 		lrcTimer0 = setTimeout("_blMove("+s+","+_o+")",xdMin*10);
   }
     
-function blLrcClass (tt, _nIdx , blID )
+function blLrcClass ( blDivBoss , tt , _nIdx , blID )
 {	
-	var xdVer	= " blLrcClass :: v1.1. 254 ";
-	var blDivBoss 	= document.body;
+	var xdVer	= " blLrcClass :: v1.1. 255 "; 
+
   var _CreateUI = function( _oBoss , _id )
   {  
 	var d 	= blo0.blDiv( _oBoss , "id_div_4_Lyric_ui" + blID  , blID ,blColor[3]); 
