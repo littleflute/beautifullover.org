@@ -45,6 +45,7 @@ var xdDbgObj = null;
 </script>
 
 
+<script src="blLrc.js" type="text/javascript"></script>
 <script src="js/blMp3Player.js"></script>
 <script> 
 
@@ -57,17 +58,5 @@ function loadPlayerListOK (){
 }
 
 
-</script>
-
-<script src="blLrc.js" type="text/javascript"></script>
-<script  type="text/javascript">
-
-var myLrc = "js/Lrc/1.js";
-if(myLrc) blo0.blScript("id_script_lrcdata",myLrc);
-function loadLyricOK(){ 
-	var l = document.getElementById("lrcdata");
-	var lDiv = blo0.blMDiv(d,d.id+"lDiv","lDiv",550,50,500,400,blGrey[6]);
-	lDiv.v = blo0.blDiv(lDiv,lDiv.id + "v",l.innerHTML,blGrey[9]);
-}
-bl$( "id_div_page_v" ).innerHTML = "v0.2. 123 ";
+bl$( "id_div_page_v" ).innerHTML = "v0.2. 124 ";
 </script>
