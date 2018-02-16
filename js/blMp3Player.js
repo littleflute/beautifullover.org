@@ -1,5 +1,5 @@
 //blMp3Player.js
-var _v_blMp3Player = "v0.0.151";
+var _v_blMp3Player = "v0.0.152";
 var s = _v_blMp3Player;
 s += '<a href="https://github.com/littleflute/beautifullover.org/edit/master/js/blMp3Player.js" target="_blank">blMp3Player.js*</a> - '; 
 s += '<a href="https://littleflute.github.io/beautifullover.org/js/blMp3Player.js" target="_blank">blMp3Player.js</a>';
@@ -9,7 +9,7 @@ var playerUI = blo0.blMDiv(document.body,"id_mdiv_playerUI",s,50,50,400,300,blGr
 function loadLyricOK(){ 
 	 var l = document.getElementById("lrcdata");
 	 var lDiv = blo0.blMDiv(document.body,"id_lDiv","lDiv",550,50,500,400,blGrey[6]);
-	 lDiv.v = blo0.blDiv(lDiv,lDiv.id + "v",l.innerHTML,blGrey[9]);
+	 lDiv.v = blo0.blDiv(lDiv,lDiv.id + "v",l.innerHTML,blGrey[0]);
 }
 
 function _parseSource(_a,_div,_src){
