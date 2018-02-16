@@ -1,5 +1,5 @@
 //blMp3Player.js
-var _v_blMp3Player = "v0.0.115";
+var _v_blMp3Player = "v0.0.121";
 var s = _v_blMp3Player;
 s += '<a href="https://github.com/littleflute/beautifullover.org/edit/master/js/blMp3Player.js" target="_blank">blMp3Player.js*</a> - '; 
 s += '<a href="https://littleflute.github.io/beautifullover.org/js/blMp3Player.js" target="_blank">blMp3Player.js</a>';
@@ -14,6 +14,7 @@ function _songClass(_song){
 }
 function _parseSource(_div,_src){
   var d = _div;
+  d.d0 = blo0.blDiv(d,d.id+"d0" ,"d0",blGrey[7]);   
   d.vs = [];
   for(i in _src){
       var v = blo0.blDiv(d,d.id+"v" + i,"v"+i,blColor[i]);   
