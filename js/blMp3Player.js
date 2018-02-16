@@ -1,5 +1,5 @@
 //blMp3Player.js
-var _v_blMp3Player = "v0.0.125";
+var _v_blMp3Player = "v0.0.131";
 var s = _v_blMp3Player;
 s += '<a href="https://github.com/littleflute/beautifullover.org/edit/master/js/blMp3Player.js" target="_blank">blMp3Player.js*</a> - '; 
 s += '<a href="https://littleflute.github.io/beautifullover.org/js/blMp3Player.js" target="_blank">blMp3Player.js</a>';
