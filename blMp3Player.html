@@ -68,9 +68,11 @@ function loadLyricOK(){
 	var l = document.getElementById("lrcdata");
 	for(var i=0; i< 1;i++)
 	{
-		lrcobj = new blLrcClass(d, l.innerHTML,3,i);
-		lrcobj.blRun(lrcobj);
+	//	lrcobj = new blLrcClass(d, l.innerHTML,3,i);
+	//	lrcobj.blRun(lrcobj);
+		var dLrc = blo0.blMDiv(d,d.id+"lrcTest","lrcTest",50,50,500,400,blGrey[8]);
+		
 	}
 }
-bl$( "id_div_page_v" ).innerHTML = "v0.2. 111 ";
+bl$( "id_div_page_v" ).innerHTML = "v0.2. 112 ";
 </script>
