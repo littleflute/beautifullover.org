@@ -66,10 +66,11 @@ var myLrc = "http://www.beautifullover.org/lrcTest.js";
 if(myLrc) blo0.blScript("id_script_lrcdata",myLrc);
 function loadLyricOK(){ 
 	var l = document.getElementById("lrcdata");
-	for(var i=0; i<m.source.length;i++){
+	for(var i=0; i< 1;i++)
+	{
 		lrcobj = new blLrcClass(d, l.innerHTML,3,i);
 		lrcobj.blRun(lrcobj);
 	}
 }
-bl$( "id_div_page_v" ).innerHTML = "v0.2. 53 ";
+bl$( "id_div_page_v" ).innerHTML = "v0.2. 55 ";
 </script>
