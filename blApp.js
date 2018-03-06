@@ -1,4 +1,4 @@
-var sTitle = "<div id = 'id_div_APP_Title'>v0.0.23 </div>";
+var sTitle = "<div id = 'id_div_APP_Title'>v0.0.24 </div>";
 
 var s = 'blo0.blScript("id_script_1","https://littleflute.github.io/bldb1/1/1/1.js")';
 
@@ -31,14 +31,21 @@ blMD.btnLoadTemplate.onclick = function(){
 }
 
 
-function loadTemplate(o) {
-var a = o[0].body;
-var b = a.split("~~~html");
-var c = b[1].split("~~~");
-var nb = bl$("id_Navbar");
-nb.innerHTML = c[0]; 
+function loadTemplates(o) {
+	var a = o[0].body;
+	var b = a.split("~~~html");
+	var c = b[1].split("~~~");
+	var nb = bl$("id_Navbar");
+	nb.innerHTML = c[0]; 
+	
+	var a = o[1].body;
+	var b = a.split("~~~html");
+	var c = b[1].split("~~~");
+	var nb = bl$("mySidebar");
+	nb.innerHTML = c[0]; 
+	
 }
-w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/2/comments", loadTemplate);
+w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/2/comments", loadTemplates);
 
  
 var tb = blo0.blDiv(blMD,blMD.id + "tb","",blGrey[2]);
