@@ -1,4 +1,4 @@
-var sTitle = "<div id = 'id_div_APP_Title'>v0.0.24 </div>";
+var sTitle = "<div id = 'id_div_APP_Title'>blApp v0.0.25 </div>";
 
 var s = 'blo0.blScript("id_script_1","https://littleflute.github.io/bldb1/1/1/1.js")';
 
@@ -49,7 +49,7 @@ w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/is
 
  
 var tb = blo0.blDiv(blMD,blMD.id + "tb","",blGrey[2]);
-tb.innerHTML = "tb";
+tb.innerHTML = "#3";
 tb.load = blo0.blBtn(tb,tb.id + "btnLoad","loadAPI",blGrey[1]);
 tb.load.onclick = function(){
   w3.getHttpObject("https://api.github.com/repos/littleflute/beautifullover.org/issues/3/comments", tb.load.loadApiOK);
