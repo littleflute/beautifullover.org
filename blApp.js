@@ -1,8 +1,10 @@
-var sTitle = "<div id = 'id_div_APP_Title'>blApp v0.0.25 </div>";
+var sTitle = "<div id = 'id_div_APP_Title'>blApp v0.0.31 </div>";
 
 var s = 'blo0.blScript("id_script_1","https://littleflute.github.io/bldb1/1/1/1.js")';
 
-var blMD = blo0.blMDiv( document.body , "id_div_4_blClass" , sTitle, 333 ,110,800,100, blGrey[1]);
+var blMD = blo0.blMDiv( document.body , "id_div_4_bblApp_UI" , sTitle, 333 ,110,800,100, blGrey[1]);
+blMD.style.zIndex = 1000;
+
 blMD.d1 = blo0.blDiv(blMD, blMD.id + "_d1","", blGrey[2]);
 blMD.d1.ta = blo0.blTextarea(blMD.d1,blMD.d1.id + "_ta", s , blGrey[1]);
 blMD.d1.ta.style.width 	= "95%";
